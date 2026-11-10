@@ -1,0 +1,15 @@
+# Use this file in Colab or Python 3.10-3.12 environments for full ML training.
+fastapi==0.116.1
+uvicorn==0.35.0
+pydantic==2.11.7
+pandas==2.3.2
+numpy==2.3.2
+scikit-learn==1.7.1
+joblib==1.5.1
+matplotlib==3.10.5
+seaborn==0.13.2
+transformers==4.55.4
+torch==2.8.0
+accelerate==1.10.1
+datasets==4.0.0
+python-multipart==0.0.20

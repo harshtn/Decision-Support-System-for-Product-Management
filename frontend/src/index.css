@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #eef2ff;
+  --bg-soft: #f8faff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --card: rgba(255, 255, 255, 0.68);
+  --card-border: rgba(148, 163, 184, 0.35);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0b1220;
+  --bg-soft: #111827;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --card: rgba(17, 24, 39, 0.6);
+  --card-border: rgba(71, 85, 105, 0.6);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: linear-gradient(140deg, var(--bg) 0%, var(--bg-soft) 45%, #e0f2fe 100%);
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+:root[data-theme='dark'] body {
+  background: linear-gradient(160deg, #0b1220 0%, #111827 45%, #041420 100%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 16px 40px rgba(30, 41, 59, 0.12);
+}
+
+.shadow-soft {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.2), 0 18px 40px rgba(79, 70, 229, 0.2);
+}
+
+.fade-up {
+  animation: fade-up 0.45s ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.6), rgba(6, 182, 212, 0.55));
+  border-radius: 999px;
+}
